@@ -5,6 +5,7 @@ import Dashboard from './components/Dashboard';
 import ManageLyrics from './components/ManageLyrics';
 import Navbar from './components/Navbar';
 import AddLyrics from './components/AddLyrics';
+import './App.css';
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -13,8 +14,10 @@ function App() {
     setIsLoggedIn(true);
   };
 
+  const basename = process.env.PUBLIC_URL;
+
   return (
-    <Router>
+    <Router basename={basename}>
       {isLoggedIn && <Navbar />}
       <Routes>
         <Route
