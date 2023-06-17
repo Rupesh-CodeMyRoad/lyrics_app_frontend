@@ -1,0 +1,10 @@
+{
+  "files": {
+    "main.js": "/lyrics_app_frontend/static/js/main.2daec473.js",
+    "index.html": "/lyrics_app_frontend/index.html",
+    "main.2daec473.js.map": "/lyrics_app_frontend/static/js/main.2daec473.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.2daec473.js"
+  ]
+}
