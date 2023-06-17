@@ -1,19 +1,27 @@
 import React, { useState } from 'react';
-import { Button, TextField, Grid, Paper, Typography } from '@material-ui/core';
+import { Button, TextField, Grid, Paper, Typography, Snackbar } from '@material-ui/core';
+import { useNavigate } from 'react-router-dom';
 
 function Login({ onLogin }) {
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+  const [errorOpen, setErrorOpen] = useState(false);
+  const navigate = useNavigate();
 
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    if (username === "admin" && password === "password") {
+    if (username === 'admin' && password === 'password') {
       onLogin();
+      navigate('/dashboard');
     } else {
-      alert('Invalid credentials');
+      setErrorOpen(true);
     }
-  }
+  };
+
+  const handleCloseError = () => {
+    setErrorOpen(false);
+  };
 
   return (
     <Grid container justify="center">
@@ -59,6 +67,13 @@ function Login({ onLogin }) {
           </Button>
         </form>
       </Grid>
+      <Snackbar
+        anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
+        open={errorOpen}
+        onClose={handleCloseError}
+        message="Invalid credentials"
+        autoHideDuration={3000}
+      />
     </Grid>
   );
 }
