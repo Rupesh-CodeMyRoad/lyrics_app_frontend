@@ -5,7 +5,6 @@ import Dashboard from './components/Dashboard';
 import ManageLyrics from './components/ManageLyrics';
 import Navbar from './components/Navbar';
 import AddLyrics from './components/AddLyrics';
-import './App.css';
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
