@@ -1,6 +1,7 @@
 {
   "name": "lyrics_app_frontend",
   "version": "0.1.0",
+  "homepage": "https://rupesh-codemyroad.github.io/lyrics_app_frontend",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.11.1",
@@ -17,7 +18,6 @@
     "react-scripts": "^2.1.3",
     "web-vitals": "^2.1.4"
   },
-  "homepage": "https://rupesh-codemyroad.github.io/lyrics_app_frontend/",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
